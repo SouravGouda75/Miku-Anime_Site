@@ -1,5 +1,5 @@
 "use client"
-import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay,EffectCoverflow } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,16 +14,22 @@ const Slider= () => {
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
+      modules={[EffectCoverflow,Navigation, Pagination, Scrollbar, A11y,Autoplay]}
       spaceBetween={30}
       slidesPerView={1}
-      
+      effect={'coverflow'}
       pagination={{ clickable: true }}
-      // autoplay={{
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // }}
-      
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
