@@ -14,22 +14,22 @@ const Slider= () => {
   return (
     <Swiper
       // install Swiper modules
-      modules={[EffectCoverflow,Navigation, Pagination, Scrollbar, A11y,Autoplay]}
-      spaceBetween={30}
+      modules={[Navigation, Pagination, Scrollbar,Autoplay]}
+      spaceBetween={70}
       slidesPerView={1}
-      effect={'coverflow'}
+      // effect={'coverflow'}
       pagination={{ clickable: true }}
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
       }}
-      coverflowEffect={{
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      }}
+      // coverflowEffect={{
+      //   rotate: 50,
+      //   stretch: 0,
+      //   depth: 100,
+      //   modifier: 1,
+      //   slideShadows: true,
+      // }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}

@@ -18,35 +18,33 @@ import Image from 'next/image'
   
   const Card = () => {
     return (
-    <div className=" lg:w-[100%]  sm:w-[80%] w-[90%] grid grid-rows-5   grid-cols-5 rounded-2xl overflow-hidden aspect-video">
-      <img className="h-full w-full col-start-1 col-end-6 row-start-1 row-end-6 "
-          src='https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/11/21/date-night-anime.jpg'
-        // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspPcUwFtJkLkbQo3oghag7_9Wh1CDoVr98w&usqp=CAU"
-        alt=""/>
-        <div className="col-start-1 col-end-6 row-start-4 p-2 row-end-6 font-mono   bg-[#04050496]  text-white
-    grid grid-rows-5 grid-col-5 ">
-          <div className="heading tracking-wide text-3xl row-start-1 row-end-1">Satoru Gojo</div>
-          <div className="info mt-0 tracking-tight h-fit w-fit text-lg 
-        leading-6 row-start-2 row-end-3 col-span-2">
+      <section class=" col-start-3 col-end-13 flex flex-col row-start-2 row-end-9">
+        <div class="grid grid-cols-9 px-2 h-full grid-rows-7 ">
+            <div class="col-start-1  col-end-10 row-start-1  row-end-7">
 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ex, atque recusandae magni ratione quidem.
-            Natus nesciunt atque eveniet, excepturi incidunt cumque aspernatur vel iusto molestias quam quis iste
-            saepe?
-          </div>
-          <div className="links flex w-[100%]  col-span-6  row-start-4 row-end-5 justify-between">
-            <div className="left flex gap-5 ">
-              <Image src={insta} width={32} height={32}/>
-              <Image src={meta} width={32} height={32}/>
-              <Image src={telegram} width={32} height={32}/>
-             </div>
-             <div className="flex gap-6 pr-2">
-             <Image src={chat} width={32} height={32}/>
-              <Image src={like} width={32} height={32}/>
-
-             </div>
-          </div>
+                <img class='w-full h-[550px]  object-cover' 
+                // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXh40iBKJEJVHPf6RtM5LHUa10hakH8MgZy-mUm-LhQLSYCvaWEvy3n-1C69kORhP639s&usqp=CAU" 
+                src="https://dbz-store.com/cdn/shop/products/6_f7ffc081-98cb-4868-9ff6-d23887806a45_990x700.jpg?v=1649998251" 
+                // src="https://preview.redd.it/new-poster-for-the-scott-pilgrim-anime-v0-1ki0ha3ifr0c1.jpg?auto=webp&s=846466f799b384b580e23db72489db39e719cdbc" 
+                />
+            </div>
+            <div class="info col-start-1 col-end-10 bg-[#08030376] backdrop-blur-sm lg:row-start-4 lg:row-end-7 row-start-5 row-end-7  ">
+              <div className="title text-6xl font-mono tracking-wider">Dragon Ball Z</div>
+              <div className="title text-xl font-mono tracking-wider mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maiores voluptatum voluptates fuga. Tenetur molestiae doloremque minima iste aspernatur placeat soluta sint corrupti, ab amet atque repellat in omnis nisi.</div>
+              <div className="flex pt-10 justify-between">
+                <div className="left flex gap-5">
+                  <Image src={insta} width={32} height={32}/>
+                  <Image src={meta} width={32} height={32}/>
+                  <Image src={telegram} width={32} height={32}/>
+                </div>
+                <div className="right flex gap-5">
+                  <Image src={chat} width={32} height={32}/>
+                  <Image src={like} width={32} height={32}/>
+                </div>
+              </div>
+            </div>
         </div>
-      </div>
+    </section>
     
     )
 }
