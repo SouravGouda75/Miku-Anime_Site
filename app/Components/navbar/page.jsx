@@ -1,6 +1,9 @@
-import React from 'react'
-
+"use client"
+import Image from 'next/image'
+import React, { useState } from 'react'
+import account from '../../Assets/account.svg'
 const Navbar = () => {
+  const [dropdown,setDropdown]=useState(false)
   return (
     <div className='navbar-section letter-style'>
         <div className="logo flex">
@@ -15,7 +18,25 @@ const Navbar = () => {
             <li className='links'>About</li>
             <li className='links'>Blogs</li>
             <li className='links'>Services</li>
+            <li className='links'>
+              <div className="">
+
+              <button
+              onClick={()=>setDropdown(!dropdown)}
+              >
+                
+                <Image  src={account} height={32} width={32}/>
+                </button> 
+              {dropdown && <div className="dropdown ">
+                <button  className='drop-button'>My Profile</button>
+                <button className='drop-button'>My Anime</button>
+                <button className='drop-button'>My Watchlist</button>
+                <button className='drop-button'>Sign Out</button>
+              </div>}
+              </div>
+              </li>
           </ul>
+          
         </div>
     </div>
   )

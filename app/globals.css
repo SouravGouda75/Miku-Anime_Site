@@ -20,12 +20,13 @@
     @apply transition ease-in-out duration-200 cursor-pointer delay-150 tracking-wide
   }
 
+ 
   .main-section {
-    @apply  p-0.5   bg-cover col-start-3 col-end-13  row-start-2 row-end-9 overflow-y-scroll
+    @apply  p-0.5 px-2    bg-cover col-start-3 col-end-13  row-start-2 row-end-9 overflow-y-scroll
   }
 
   .hero-section {
-    @apply  h-full
+    @apply  h-fit 
   }
 
   .menu-section {
@@ -54,12 +55,15 @@
     /* shadow-lg shadow-teal-600/35 */
   }
 
+  .title{
+    @apply text-3xl font-mono text-gray-100/85
+  }
   .logo {
     @apply col-start-2 col-end-2 items-center
   }
 
   .nav-options {
-    @apply col-start-10 col-end-12 md:col-start-9 sm:col-start-6
+    @apply col-start-11 col-end-13 pr-10 md:col-start-9 sm:col-start-6
   }
 
   .btn-general {
@@ -117,17 +121,21 @@
   .followers>span{
     @apply gradient-text-hero
   }
+
+  .content{
+    @apply  w-full h-[300px] flex gap-3 mt-10
+  }
+
+  .dropdown{
+    @apply absolute  w-[150px] bg-black rounded-md right-5 border border-gray-500 top-16 h-fit  z-10 
+    flex flex-col gap-5 text-center py-4
+  }
+  .drop-button{
+    @apply p-2 w-full btn-general
+  }
 }
 
-.glow-ball {
-  border-radius: 80%;
-  border: transparent;
-  background: hsla(16, 63%, 42%, 0.64);
 
-  width: 0px;
-  aspect-ratio: 1;
-  box-shadow: 0 0 50rem 10rem hsla(16, 63%, 47%, 0.64);
-}
 .user-font {
   font-family: "Permanent Marker", cursive;
   font-weight: 400;
