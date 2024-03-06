@@ -25,7 +25,7 @@ const Navbar = () => {
               onClick={()=>setDropdown(!dropdown)}
               >
                 
-                <Image  src={account} height={32} width={32}/>
+                <Image  src={account} height={0} width={25}/>
                 </button> 
               {dropdown && <div className="dropdown ">
                 <button  className='drop-button'>My Profile</button>
