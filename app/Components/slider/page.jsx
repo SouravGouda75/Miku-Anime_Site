@@ -9,8 +9,21 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Card from '../card/page';
-
+import { useEffect, useState } from 'react';
 const Slider= () => {
+  const [bannerinfo,setBannerInfo]=useState([])
+  useEffect(() => {
+    const spotlight=async()=>{
+        let res=await fetch('http://localhost:3000/api/Banner')
+        res=await res.json()
+        // console.log(res);
+        setBannerInfo(res);
+    }
+  
+    spotlight()
+
+  }, [1==1])
+  // console.log('API : ',process.env.NEXT_PUBLIC_API_URI);
   return (
     <Swiper
       // install Swiper modules
@@ -31,22 +44,25 @@ const Slider= () => {
       //   slideShadows: true,
       // }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
       className='swiper'
     >
-      <SwiperSlide className='slide'>
-        <Card/>
+      
+      {
+        
+        bannerinfo.map((info)=>{
+          return <SwiperSlide key={info.bannerImage} className='slide'>
+        <Card banner={info.bannerImage} description={info.description} title={info.title.native}/>
       </SwiperSlide>
-      <SwiperSlide className='slide'>
-        <Card/>
-      </SwiperSlide>
-      <SwiperSlide className='slide'>
-        <Card/>
-      </SwiperSlide>
-      <SwiperSlide className='slide'>
-        <Card/>
-      </SwiperSlide>
+      
+      })
+        
+    }
+  
+      
+      
+     
     </Swiper>
   );
 };
