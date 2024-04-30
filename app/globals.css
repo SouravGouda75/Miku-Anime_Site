@@ -4,8 +4,13 @@
 @tailwind utilities;
 
 @layer components {
+
+  body{
+      @apply bg-black h-screen text-white
+  }
   .base {
-    @apply min-w-full min-h-screen text-white grid bg-black grid-cols-12 grid-rows-8
+    /* @apply min-w-full min-h-screen text-white grid bg-black grid-cols-12 grid-rows-8 */
+    @apply   flex h-screen  w-full
   }
 
   .letter-style {
@@ -22,7 +27,8 @@
 
  
   .main-section {
-    @apply  p-0.5 px-2   bg-cover col-start-2 col-end-13  row-start-1 row-end-9 overflow-y-scroll
+    @apply   max-sm:basis-[100%] max-md:basis-[95%]    basis-[91.6%]  overflow-y-scroll  
+    /* @apply  p-0.5 px-2   bg-cover col-start-2 col-end-13  row-start-1 row-end-9 overflow-y-scroll */
     /* @apply  p-0.5 px-2    bg-cover col-start-2 col-end-13  row-start-3 row-end-9 overflow-y-scroll */
   }
 
@@ -32,7 +38,8 @@
 
   .menu-section {
     /* @apply  col-start-1  col-end-3 row-start-2 row-end-12 gap-4 flex flex-col pt-5 */
-    @apply  col-start-1 fixed   col-end-1 row-start-1 row-end-12 gap-4 justify-center items-center max-w-full max-h-full
+    /* @apply  col-start-1 fixed   col-end-1 row-start-1 row-end-12 gap-4 justify-center items-center max-w-full max-h-full */
+    @apply max-sm:hidden  max-md:basis-[5%]  min-h-screen 
   }
 
   * {

@@ -1,8 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useState } from 'react'
-import account from '../../Assets/account.svg'
-import hamburger from '../../Assets/hamburger.svg'
+import{hamburger,account}from '@/app/Assets/icons.js'
 const Navbar = () => {
   const [dropdown,setDropdown]=useState(false)
   return (

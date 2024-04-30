@@ -1,15 +1,11 @@
 import React from 'react'
-import insta from '../../Assets/instagram.svg'
-import meta from '../../Assets/meta.svg'
-import telegram from '../../Assets/telegram.svg'
-import like from '../../Assets/like.svg'
-import chat from '../../Assets/chat.svg'
+import {insta,meta,telegram,like,chat} from '../../Assets/icons.js'
 import Image from 'next/image'
 
   const Card = ({title,banner,description}) => {
     return (
-      <section className=" col-start-3 col-end-13 grid grid-cols-8 grid-rows-6 border max-h-[600px] row-start-2 row-end-9">
-              <img className='col-span-8 row-start-1 row-end-5 min-w-full  object-contain' src={banner} alt="banner" />
+      <section className=" col-start-3 col-end-13 grid grid-cols-8 grid-rows-6  max-h-[600px] row-start-2 row-end-9">
+              <img className='col-span-8 row-start-1 row-end-5 min-w-full  min-h-full' src={banner} alt="banner" />
               <div className="absolute top-[22rem]">
             <div className="info col-start-1 col-end-10 bg-[#08030376] backdrop-blur-sm lg:row-start-4 lg:row-end-7 row-start-5 row-end-7  ">
 

@@ -16,7 +16,7 @@ const Slider= () => {
     const spotlight=async()=>{
         let res=await fetch('http://localhost:3000/api/Banner')
         res=await res.json()
-        console.log(res);
+        // console.log(res);
         setBannerInfo(res);
     }
   

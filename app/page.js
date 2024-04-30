@@ -6,8 +6,8 @@ const page = () => {
       <Navbar/>
       <div className='base'>
       <Sidebar/>
-      </div>
       <Hero/>
+      </div>
     </div>
   )
 }

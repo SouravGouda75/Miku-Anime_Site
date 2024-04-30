@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default function card({img, title, desc}) {
+export default function card({images, title, description}) {
   return (
     <div>
       <div className="card">
-        <img src={img} alt="This is a image" />
+        <img src={images} alt='pic' />
         <div className="divcard">
             <h2>{title}</h2>
-            <p>{desc}</p>
+            <p>{description.substring(0,20)}..</p>
         </div>
       </div>
     </div>

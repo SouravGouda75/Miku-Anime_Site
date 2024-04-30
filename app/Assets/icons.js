@@ -1,0 +1,8 @@
+export {default as meta} from './meta.svg'
+export {default as chat} from './chat.svg'
+export {default as explore} from './explore.svg'
+export {default as insta} from './instagram.svg'
+export {default as like} from './like.svg'
+export {default as account} from './account.svg'
+export {default as telegram} from './telegram.svg'
+export {default as hamburger} from './hamburger.svg'
