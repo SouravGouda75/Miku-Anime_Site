@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useState } from 'react'
+import Link from 'next/link'
 import{hamburger,account}from '@/app/Assets/icons.js'
 const Navbar = () => {
   const [dropdown,setDropdown]=useState(false)
@@ -16,7 +17,8 @@ const Navbar = () => {
           <ul className='flex justify-between max-sm:hidden'>
             <li className='links'>Home</li>
             <li className='links'>About</li>
-            <li className='links'>Blogs</li>
+            {/* <li className='links'>Blogs</li> */}
+            <Link href="/Components/news">News</Link>
             <li className='links'>Services</li>
             <li className='links'>
               <div className=" flex  max-sm:col-start-10 max-sm:col-span-2">
