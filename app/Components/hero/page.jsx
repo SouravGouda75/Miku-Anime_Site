@@ -7,6 +7,7 @@ import Newscard from '../news/newscard'
 const Hero = () => {
   const [data,setData]=useState({})
  
+ 
 
   useEffect(() => {
     
@@ -14,6 +15,7 @@ const Hero = () => {
       const res=await fetch('http://localhost:3000/api/test')
       const ans=await res.json()
       // console.log(ans.data);
+      setData(await ans.data)
       setData(await ans.data)
     }
   
@@ -45,8 +47,12 @@ const Hero = () => {
       <div className="news">
         {/* <button className='bg-red-500 p-1 rounded-lg'
         onClick={e=>setClick(!click)}>Click</button> */}
+        {/* <button className='bg-red-500 p-1 rounded-lg'
+        onClick={e=>setClick(!click)}>Click</button> */}
         <div className="content">
 
+      {/* {
+        !click &&
       {/* {
         !click &&
         data.map(element=>{
@@ -60,6 +66,7 @@ const Hero = () => {
           
           
         } */}
+     
       {
       
         Array.from(data).map(element=>{
