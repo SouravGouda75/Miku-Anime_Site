@@ -1,6 +1,7 @@
+"use client"
 import React, { useState } from 'react'
 
-const page = () => {
+const Dashboard = () => {
   const [username, setUserName] = useState('Alex Greece')
   const [progress, setProgress] = useState(30)
   const [followers, setFollowers] = useState(2000000)
@@ -32,4 +33,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Dashboard;

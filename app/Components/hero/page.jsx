@@ -1,14 +1,9 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import Slider from '../slider/page'
-import Minicard from '../card/minicard'
-import links from '../../../constants/topanime.js'
-import Newscard from '../news/newscard'
+import links from '@/constants/topanime'
+import { Slider, Minicard, Newscard } from "../";
 const Hero = () => {
   const [data,setData]=useState({})
- 
- 
-
   useEffect(() => {
     
     const run=async()=>{

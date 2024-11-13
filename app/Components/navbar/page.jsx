@@ -7,7 +7,7 @@ const Navbar = () => {
   const [dropdown,setDropdown]=useState(false)
   return (
     <div className='navbar-section letter-style'>
-        <div className="logo flex">
+        <div className="logo flex flex-start">
             <img className='h-[50px]' src={"https://wallpaperset.com/w/full/2/6/e/22530.jpg"} alt='logo'/>
             <span className='tracking-widest'>
               MIKU
@@ -15,11 +15,11 @@ const Navbar = () => {
         </div>
         <div className="nav-options">
           <ul className='flex justify-between max-sm:hidden'>
-            <li className='links'>Home</li>
+            {/* <li className='links'>Home</li>
             <li className='links'>About</li>
             {/* <li className='links'>Blogs</li> */}
-            <Link href="/Components/news">News</Link>
-            <li className='links'>Services</li>
+            {/* <Link href="">News</Link>
+            <li className='links'>Services</li> */}
             <li className='links'>
               <div className=" flex  max-sm:col-start-10 max-sm:col-span-2">
                 <Image className='hidden ' src={hamburger} width={15} alt='social links'/>

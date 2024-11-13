@@ -1,5 +1,5 @@
 import React from 'react'
-import {insta,meta,telegram,like,chat} from '../../Assets/icons.js'
+import {insta,meta,telegram,like,chat} from '@/app/Assets/icons.js'
 import Image from 'next/image'
 
   const Card = ({title,banner,description}) => {
