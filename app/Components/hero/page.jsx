@@ -18,9 +18,9 @@ const Hero = () => {
   }, [])
   return (
     <div className='main-section'>
-      <div className="hero-section">
+      {/* <div className="hero-section">
         <Slider />
-      </div>
+      </div> */}
       <div className="top-anime ">
         <h1 className="title">
           Top Anime This Week

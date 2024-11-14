@@ -8,6 +8,7 @@ import Dashboard from "./dashboard/page";
 import Minicard from "./card/minicard";
 import Newscard from "./news/newscard";
 import Provider from "./Provider";
+import Dropdown from "./navbar/dropdown";
 
 export {
   Card,
@@ -20,4 +21,5 @@ export {
   Minicard,
   Newscard,
   Provider,
+  Dropdown
 };
