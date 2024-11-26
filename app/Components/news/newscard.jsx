@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function newscard({images, title, description}) {
+export default function Newscard({images, title, description}) {
   return (
     <div>
       <div className="card">

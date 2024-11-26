@@ -1,5 +1,5 @@
 import React from 'react'
-import like from '../../Assets/like.svg'
+import {like} from '@/app/Assets/icons.js'
 import Image from 'next/image'
 
 const Minicard = ({image,name}) => {

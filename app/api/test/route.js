@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
- import { options } from '@/constants/API'
+import { options } from '@/constants/API'
 export async function GET() {
     const res=await fetch('https://api.jikan.moe/v4/anime/1/news')
       const ans=await res.json()

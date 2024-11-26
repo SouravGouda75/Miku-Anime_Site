@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 // import demo from '../../../constants/demo'
 import Newscard from '../news/newscard'
 
-const page = () => {
+const News = () => {
   const [data, setData] = useState({})
     useEffect( () => {
       const run=async()=>{
@@ -56,4 +56,5 @@ const page = () => {
   )
 }
 
-export default page
+
+export default News;
