@@ -12,7 +12,7 @@ const PostSchema = new Schema({
   ],
   comments: [
     {
-      type: moongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "Comment",
     },
   ],
