@@ -6,7 +6,7 @@ const PostSchema = new Schema({
   },
   likes: [
     {
-      type: moongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User",
     },
   ],
@@ -20,7 +20,7 @@ const PostSchema = new Schema({
     type: String,
   },
   userId: {
-    type: moongoose.Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "User",
   },
   createdAt: {
