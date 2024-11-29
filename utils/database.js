@@ -8,7 +8,7 @@ export const connectToDB = async() => {
         return
     }
     try{
-        await mongoose.connect('process.env.MONGODB_URL', {
+        await mongoose.connect(process.env.MONGODB_URI, {
             dbName:'Miku-Anime',
             useNewUrlParser: true,
             useUnifiedTopology: true

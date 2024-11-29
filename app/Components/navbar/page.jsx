@@ -41,9 +41,9 @@ const Navbar = () => {
           {session?.user ? (
             <div>
               <button onClick={() => setDropdown(!dropdown)}>
-                <Image src={account} height={0} width={25} alt='social links' />
+                <Image src={session?.user.image} height={0} width={25} alt='social links' />
               </button>
-              {dropdown && <Dropdown />}
+              {dropdown && <Dropdown onClick={signOut} />}
             </div>
           ) : (
             <>
